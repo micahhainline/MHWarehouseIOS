@@ -8,6 +8,7 @@
 @property (nonatomic, readonly) int volumeInSquareMeters;
 @property (nonatomic, readonly) MHHazmatFlags hazmatFlags;
 @property (nonatomic, readonly) BOOL requiresStairs;
+@property(nonatomic, readonly) int remainingVolumeInSquareMeters;
 
 - (id)initWithVolumeInSquareMeters:(int)volume;
 

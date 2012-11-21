@@ -28,4 +28,12 @@
     return self;
 }
 
+- (int)remainingVolumeInSquareMeters {
+    int remainingVolume = self.volumeInSquareMeters;
+    for (MHBox *box in self.boxes) {
+        remainingVolume -= box.volumeInSquareMeters;
+    }
+    return remainingVolume;
+}
+
 @end
