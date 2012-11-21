@@ -16,4 +16,5 @@
 
 - (id)initWithVolumeInSquareMeters:(int)volume andStairs:(BOOL)stairs andHazmatFlags:(MHHazmatFlags)hazmatFlags;
 
+- (BOOL)canSafelyHold:(MHBox *)box;
 @end

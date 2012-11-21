@@ -36,4 +36,11 @@
     return remainingVolume;
 }
 
+- (BOOL)canSafelyHold:(MHBox *)box {
+    BOOL roomIsFull = self.remainingVolumeInSquareMeters < box.volumeInSquareMeters;
+    BOOL tooLargeForStairs = self.requiresStairs && box.volumeInSquareMeters > 50;
+    BOOL unsafe = ~self.hazmatFlags & box.hazmatFlags;
+    return !roomIsFull && !tooLargeForStairs && !unsafe;
+}
+
 @end
