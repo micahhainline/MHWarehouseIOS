@@ -26,19 +26,18 @@
 - (void)testWhenBoxesAreAddedThenTheyAreAddedToFirstRoomFirstUntilCapacityIsReached {
     MHRoom *loadingDock = [[MHRoom alloc] initWithVolumeInSquareMeters:100];
     MHRoom *mainStorage = [[MHRoom alloc] initWithVolumeInSquareMeters:1000];
-
-    MHWarehouse *testObject = [[MHWarehouse alloc] initWithRooms:@[loadingDock, mainStorage]];
     MHBox *box1 = [[MHBox alloc] initWithName:@"box1" andVolumeInSquareMeters:10];
     MHBox *box2 = [[MHBox alloc] initWithName:@"box2" andVolumeInSquareMeters:70];
     MHBox *box3 = [[MHBox alloc] initWithName:@"box3" andVolumeInSquareMeters:15];
     MHBox *box4 = [[MHBox alloc] initWithName:@"box4" andVolumeInSquareMeters:10];
 
-    NSArray *rejectedBoxes = [testObject addBoxes:@[box1, box2, box3, box4]];
+    MHWarehouse *testObject = [[MHWarehouse alloc] initWithRooms:@[loadingDock, mainStorage]];
+
+    [testObject addBoxes:@[box1, box2, box3, box4]];
 
     NSArray *expected = @[box1, box2, box3];
     GHAssertEqualContents(loadingDock.boxes, expected);
     GHAssertEqualContents(mainStorage.boxes, @[box4]);
-    GHAssertNil(rejectedBoxes, nil);
 }
 
 - (void)testWhenBoxOver50VolumeIsLoadedThenItIsNotLoadedInARoomRequiringStairs {
@@ -51,12 +50,11 @@
 
     MHWarehouse *testObject = [[MHWarehouse alloc] initWithRooms:@[basement, mainStorage]];
 
-    NSArray *rejectedBoxes = [testObject addBoxes:@[box1, box2, box3, box4]];
+    [testObject addBoxes:@[box1, box2, box3, box4]];
 
     NSArray *expected = @[box1, box2, box4];
     GHAssertEqualContents(basement.boxes, expected);
     GHAssertEqualContents(mainStorage.boxes, @[box3]);
-    GHAssertNil(rejectedBoxes, nil);
 }
 
 - (void)testWhenBoxesExceedCapacityThenFinalBoxesAreRejected {
@@ -89,7 +87,7 @@
     NSArray *expected = @[box1, box3];
     GHAssertEqualContents(loadingDock.boxes, expected);
     GHAssertEqualContents(chemStorage.boxes, @[box2]);
-    GHAssertNil(rejectedBoxes, nil);
+    GHAssertTrue(rejectedBoxes.count == 0, nil);
 }
 
 - (void)testWhenHazmatHasNoSafeRoomThenItIsRejected {
@@ -129,7 +127,7 @@
     GHAssertEqualContents(chemLoft.boxes, expected);
     expected = @[box2, box3, box4, box6];
     GHAssertEqualContents(vault.boxes, expected);
-    GHAssertNil(rejectedBoxes, nil);
+    GHAssertTrue(rejectedBoxes.count == 0, nil);
 }
 
 - (void)testBoxesAreNotPlacedSuchThatAHazmatWillHaveNoPlaceToGoWhenThereIsEnoughRoom {
@@ -149,7 +147,7 @@
     GHAssertEqualContents(vault.boxes, expected);
     expected = @[box2, box3, box4];
     GHAssertEqualContents(mainStorage.boxes, expected);
-    GHAssertNil(rejectedBoxes, nil);
+    GHAssertTrue(rejectedBoxes.count == 0, nil);
 }
 
 - (void)testOrderForBoxesIsPreservedWhenThereIsEnoughRoom {
@@ -169,7 +167,7 @@
     GHAssertEqualContents(vault.boxes, expected);
     expected = @[box2, box3];
     GHAssertEqualContents(mainStorage.boxes, expected);
-    GHAssertNil(rejectedBoxes, nil);
+    GHAssertTrue(rejectedBoxes.count == 0, nil);
 }
 
 @end
