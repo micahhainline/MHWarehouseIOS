@@ -18,7 +18,9 @@
 }
 
 - (NSArray *)addBoxes:(NSArray *)boxes {
-    return nil;
+
+
+    return nil; //for now, ignore return value
 }
 
 @end

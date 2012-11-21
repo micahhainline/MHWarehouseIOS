@@ -2,7 +2,7 @@
 
 @interface MHRoom ()
 
-@property (nonatomic, readwrite) int capacityInSquareMeters;
+@property (nonatomic, readwrite) int volumeInSquareMeters;
 @property (nonatomic, readwrite) MHHazmatFlags hazmatFlags;
 @property (nonatomic, readwrite) BOOL requiresStairs;
 
@@ -10,12 +10,20 @@
 
 @implementation MHRoom
 
-- (id)initWithName:(NSString *)name andCapacityInSquareMeters:(int)capacity andHazmatFlags:(MHHazmatFlags)hazmatFlags requiresStairs:(BOOL)requiresStairs {
+- (id)initWithVolumeInSquareMeters:(int)volume {
+    return [self initWithVolumeInSquareMeters:volume andStairs:NO];
+}
+
+- (id)initWithVolumeInSquareMeters:(int)volume andStairs:(BOOL)stairs {
+    return [self initWithVolumeInSquareMeters:volume andStairs:stairs andHazmatFlags:MHHazmatFlagsNone];
+}
+
+- (id)initWithVolumeInSquareMeters:(int)volume andStairs:(BOOL)stairs andHazmatFlags:(MHHazmatFlags)hazmatFlags {
     if (self = [super init]) {
         self.boxes = [NSMutableArray array];
-        self.capacityInSquareMeters = capacity;
+        self.volumeInSquareMeters = volume;
         self.hazmatFlags = hazmatFlags;
-        self.requiresStairs = requiresStairs;
+        self.requiresStairs = stairs;
     }
     return self;
 }

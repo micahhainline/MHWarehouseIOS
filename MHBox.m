@@ -10,6 +10,10 @@
 
 @implementation MHBox
 
+- (id)initWithName:(NSString *)name andVolumeInSquareMeters:(int)volume {
+    return [self initWithName:name andVolumeInSquareMeters:volume andHazmatFlags:MHHazmatFlagsNone];
+}
+
 - (id)initWithName:(NSString *)name andVolumeInSquareMeters:(int)volume andHazmatFlags:(MHHazmatFlags)hazmatFlags {
     if (self = [super init]) {
         self.name = name;
