@@ -10,29 +10,28 @@
 		5AB91CD415DA8EDA00DFFA92 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5AB91CD315DA8EDA00DFFA92 /* UIKit.framework */; };
 		5AB91CD615DA8EDA00DFFA92 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5AB91CD515DA8EDA00DFFA92 /* Foundation.framework */; };
 		5AB91CD815DA8EDA00DFFA92 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5AB91CD715DA8EDA00DFFA92 /* CoreGraphics.framework */; };
-		5AC8ED9B1652F268007C86A8 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5AB91CD315DA8EDA00DFFA92 /* UIKit.framework */; };
-		5AC8ED9C1652F268007C86A8 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5AB91CD515DA8EDA00DFFA92 /* Foundation.framework */; };
-		5AC8ED9D1652F268007C86A8 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5AB91CD715DA8EDA00DFFA92 /* CoreGraphics.framework */; };
-		5AC8EDC21652F4F1007C86A8 /* GHUnitIOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5AC8EDC11652F4F1007C86A8 /* GHUnitIOS.framework */; };
-		5AC8EDC41652F741007C86A8 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5AC8EDC31652F741007C86A8 /* QuartzCore.framework */; };
 		5ADFD088165441D20037B619 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5ADFD081165441D20037B619 /* main.m */; };
 		5ADFD08A165441D20037B619 /* MHAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5ADFD083165441D20037B619 /* MHAppDelegate.m */; };
-		5ADFD08B165441D20037B619 /* MHAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5ADFD083165441D20037B619 /* MHAppDelegate.m */; };
 		5ADFD08C165441D20037B619 /* MHWarehouse.m in Sources */ = {isa = PBXBuildFile; fileRef = 5ADFD085165441D20037B619 /* MHWarehouse.m */; };
-		5ADFD08D165441D20037B619 /* MHWarehouse.m in Sources */ = {isa = PBXBuildFile; fileRef = 5ADFD085165441D20037B619 /* MHWarehouse.m */; };
 		5ADFD08E165441D20037B619 /* MHWarehouseIOS-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5ADFD086165441D20037B619 /* MHWarehouseIOS-Info.plist */; };
-		5ADFD08F165441D20037B619 /* MHWarehouseIOS-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5ADFD086165441D20037B619 /* MHWarehouseIOS-Info.plist */; };
-		5ADFD097165441F40037B619 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5ADFD090165441F40037B619 /* Default-568h@2x.png */; };
-		5ADFD098165441F40037B619 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 5ADFD091165441F40037B619 /* Default.png */; };
-		5ADFD099165441F40037B619 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5ADFD092165441F40037B619 /* Default@2x.png */; };
-		5ADFD09A165441F40037B619 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5ADFD093165441F40037B619 /* main.m */; };
-		5ADFD09B165441F40037B619 /* MHWarehouseIOSTest-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5ADFD094165441F40037B619 /* MHWarehouseIOSTest-Info.plist */; };
-		5ADFD09C165441F40037B619 /* MHWarehouseTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 5ADFD096165441F40037B619 /* MHWarehouseTest.m */; };
 		5ADFD0B3165444400037B619 /* MHRoom.m in Sources */ = {isa = PBXBuildFile; fileRef = 5ADFD0B2165444400037B619 /* MHRoom.m */; };
-		5ADFD0B4165444400037B619 /* MHRoom.m in Sources */ = {isa = PBXBuildFile; fileRef = 5ADFD0B2165444400037B619 /* MHRoom.m */; };
 		5ADFD0B7165445040037B619 /* MHBox.m in Sources */ = {isa = PBXBuildFile; fileRef = 5ADFD0B6165445040037B619 /* MHBox.m */; };
-		5ADFD0B8165445040037B619 /* MHBox.m in Sources */ = {isa = PBXBuildFile; fileRef = 5ADFD0B6165445040037B619 /* MHBox.m */; };
+		8BD096E01AD809FC00667CA5 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8BD096DF1AD809FC00667CA5 /* XCTest.framework */; };
+		8BD096E11AD809FC00667CA5 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5AB91CD515DA8EDA00DFFA92 /* Foundation.framework */; };
+		8BD096E21AD809FC00667CA5 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5AB91CD315DA8EDA00DFFA92 /* UIKit.framework */; };
+		8BD096E81AD809FC00667CA5 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 8BD096E61AD809FC00667CA5 /* InfoPlist.strings */; };
+		8BD096EA1AD809FC00667CA5 /* MHWarehouseIOS_Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 8BD096E91AD809FC00667CA5 /* MHWarehouseIOS_Tests.m */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		8BD096EC1AD809FC00667CA5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5AB91CC615DA8EDA00DFFA92 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 5AB91CCE15DA8EDA00DFFA92;
+			remoteInfo = MHWarehouseIOS;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		2EFEB9A1BE9065036633D893 /* MHHazmatFlags.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MHHazmatFlags.h; path = MHWarehouseIOS.xcodeproj/MHHazmatFlags.h; sourceTree = SOURCE_ROOT; };
@@ -40,7 +39,6 @@
 		5AB91CD315DA8EDA00DFFA92 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		5AB91CD515DA8EDA00DFFA92 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		5AB91CD715DA8EDA00DFFA92 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
-		5AC8ED991652F268007C86A8 /* MHWarehouseIOSTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MHWarehouseIOSTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5AC8EDC11652F4F1007C86A8 /* GHUnitIOS.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GHUnitIOS.framework; sourceTree = "<group>"; };
 		5AC8EDC31652F741007C86A8 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		5ADFD081165441D20037B619 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = MHWarehouseIOS/main.m; sourceTree = SOURCE_ROOT; };
@@ -50,17 +48,16 @@
 		5ADFD085165441D20037B619 /* MHWarehouse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MHWarehouse.m; path = MHWarehouseIOS/MHWarehouse.m; sourceTree = SOURCE_ROOT; };
 		5ADFD086165441D20037B619 /* MHWarehouseIOS-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "MHWarehouseIOS-Info.plist"; path = "MHWarehouseIOS/MHWarehouseIOS-Info.plist"; sourceTree = SOURCE_ROOT; };
 		5ADFD087165441D20037B619 /* MHWarehouseIOS-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "MHWarehouseIOS-Prefix.pch"; path = "MHWarehouseIOS/MHWarehouseIOS-Prefix.pch"; sourceTree = SOURCE_ROOT; };
-		5ADFD090165441F40037B619 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default-568h@2x.png"; path = "MHWarehouseIOSTest/Default-568h@2x.png"; sourceTree = SOURCE_ROOT; };
-		5ADFD091165441F40037B619 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Default.png; path = MHWarehouseIOSTest/Default.png; sourceTree = SOURCE_ROOT; };
-		5ADFD092165441F40037B619 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default@2x.png"; path = "MHWarehouseIOSTest/Default@2x.png"; sourceTree = SOURCE_ROOT; };
-		5ADFD093165441F40037B619 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = MHWarehouseIOSTest/main.m; sourceTree = SOURCE_ROOT; };
-		5ADFD094165441F40037B619 /* MHWarehouseIOSTest-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "MHWarehouseIOSTest-Info.plist"; path = "MHWarehouseIOSTest/MHWarehouseIOSTest-Info.plist"; sourceTree = SOURCE_ROOT; };
-		5ADFD095165441F40037B619 /* MHWarehouseIOSTest-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "MHWarehouseIOSTest-Prefix.pch"; path = "MHWarehouseIOSTest/MHWarehouseIOSTest-Prefix.pch"; sourceTree = SOURCE_ROOT; };
-		5ADFD096165441F40037B619 /* MHWarehouseTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MHWarehouseTest.m; path = MHWarehouseIOSTest/MHWarehouseTest.m; sourceTree = SOURCE_ROOT; };
 		5ADFD0B1165444400037B619 /* MHRoom.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MHRoom.h; path = MHWarehouseIOS/MHRoom.h; sourceTree = SOURCE_ROOT; };
 		5ADFD0B2165444400037B619 /* MHRoom.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MHRoom.m; path = MHWarehouseIOS/MHRoom.m; sourceTree = SOURCE_ROOT; };
 		5ADFD0B5165445030037B619 /* MHBox.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MHBox.h; sourceTree = SOURCE_ROOT; };
 		5ADFD0B6165445040037B619 /* MHBox.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MHBox.m; sourceTree = SOURCE_ROOT; };
+		8BD096DE1AD809FC00667CA5 /* MHWarehouseIOS Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "MHWarehouseIOS Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		8BD096DF1AD809FC00667CA5 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		8BD096E51AD809FC00667CA5 /* MHWarehouseIOS Tests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "MHWarehouseIOS Tests-Info.plist"; sourceTree = "<group>"; };
+		8BD096E71AD809FC00667CA5 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		8BD096E91AD809FC00667CA5 /* MHWarehouseIOS_Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MHWarehouseIOS_Tests.m; sourceTree = "<group>"; };
+		8BD096EB1AD809FC00667CA5 /* MHWarehouseIOS Tests-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MHWarehouseIOS Tests-Prefix.pch"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,15 +71,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		5AC8ED961652F268007C86A8 /* Frameworks */ = {
+		8BD096DB1AD809FC00667CA5 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5AC8EDC41652F741007C86A8 /* QuartzCore.framework in Frameworks */,
-				5AC8ED9B1652F268007C86A8 /* UIKit.framework in Frameworks */,
-				5AC8ED9C1652F268007C86A8 /* Foundation.framework in Frameworks */,
-				5AC8ED9D1652F268007C86A8 /* CoreGraphics.framework in Frameworks */,
-				5AC8EDC21652F4F1007C86A8 /* GHUnitIOS.framework in Frameworks */,
+				8BD096E01AD809FC00667CA5 /* XCTest.framework in Frameworks */,
+				8BD096E21AD809FC00667CA5 /* UIKit.framework in Frameworks */,
+				8BD096E11AD809FC00667CA5 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -93,7 +88,7 @@
 			isa = PBXGroup;
 			children = (
 				5AB91CD915DA8EDA00DFFA92 /* MHWarehouseIOS */,
-				5AC8ED9E1652F269007C86A8 /* MHWarehouseIOSTest */,
+				8BD096E31AD809FC00667CA5 /* MHWarehouseIOS Tests */,
 				5AB91CD215DA8EDA00DFFA92 /* Frameworks */,
 				5AB91CD015DA8EDA00DFFA92 /* Products */,
 			);
@@ -103,7 +98,7 @@
 			isa = PBXGroup;
 			children = (
 				5AB91CCF15DA8EDA00DFFA92 /* MHWarehouseIOS.app */,
-				5AC8ED991652F268007C86A8 /* MHWarehouseIOSTest.app */,
+				8BD096DE1AD809FC00667CA5 /* MHWarehouseIOS Tests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -116,6 +111,7 @@
 				5AB91CD315DA8EDA00DFFA92 /* UIKit.framework */,
 				5AB91CD515DA8EDA00DFFA92 /* Foundation.framework */,
 				5AB91CD715DA8EDA00DFFA92 /* CoreGraphics.framework */,
+				8BD096DF1AD809FC00667CA5 /* XCTest.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -148,25 +144,21 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		5AC8ED9E1652F269007C86A8 /* MHWarehouseIOSTest */ = {
+		8BD096E31AD809FC00667CA5 /* MHWarehouseIOS Tests */ = {
 			isa = PBXGroup;
 			children = (
-				5AC8ED9F1652F269007C86A8 /* Supporting Files */,
-				5ADFD096165441F40037B619 /* MHWarehouseTest.m */,
+				8BD096E91AD809FC00667CA5 /* MHWarehouseIOS_Tests.m */,
+				8BD096E41AD809FC00667CA5 /* Supporting Files */,
 			);
-			name = MHWarehouseIOSTest;
-			path = SecretSantaIOSTest;
+			path = "MHWarehouseIOS Tests";
 			sourceTree = "<group>";
 		};
-		5AC8ED9F1652F269007C86A8 /* Supporting Files */ = {
+		8BD096E41AD809FC00667CA5 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				5ADFD090165441F40037B619 /* Default-568h@2x.png */,
-				5ADFD091165441F40037B619 /* Default.png */,
-				5ADFD092165441F40037B619 /* Default@2x.png */,
-				5ADFD093165441F40037B619 /* main.m */,
-				5ADFD094165441F40037B619 /* MHWarehouseIOSTest-Info.plist */,
-				5ADFD095165441F40037B619 /* MHWarehouseIOSTest-Prefix.pch */,
+				8BD096E51AD809FC00667CA5 /* MHWarehouseIOS Tests-Info.plist */,
+				8BD096E61AD809FC00667CA5 /* InfoPlist.strings */,
+				8BD096EB1AD809FC00667CA5 /* MHWarehouseIOS Tests-Prefix.pch */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -191,22 +183,23 @@
 			productReference = 5AB91CCF15DA8EDA00DFFA92 /* MHWarehouseIOS.app */;
 			productType = "com.apple.product-type.application";
 		};
-		5AC8ED981652F268007C86A8 /* MHWarehouseIOSTest */ = {
+		8BD096DD1AD809FC00667CA5 /* MHWarehouseIOS Tests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 5AC8EDB21652F269007C86A8 /* Build configuration list for PBXNativeTarget "MHWarehouseIOSTest" */;
+			buildConfigurationList = 8BD096F01AD809FC00667CA5 /* Build configuration list for PBXNativeTarget "MHWarehouseIOS Tests" */;
 			buildPhases = (
-				5AC8ED951652F268007C86A8 /* Sources */,
-				5AC8ED961652F268007C86A8 /* Frameworks */,
-				5AC8ED971652F268007C86A8 /* Resources */,
+				8BD096DA1AD809FC00667CA5 /* Sources */,
+				8BD096DB1AD809FC00667CA5 /* Frameworks */,
+				8BD096DC1AD809FC00667CA5 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				8BD096ED1AD809FC00667CA5 /* PBXTargetDependency */,
 			);
-			name = MHWarehouseIOSTest;
-			productName = SecretSantaIOSTest;
-			productReference = 5AC8ED991652F268007C86A8 /* MHWarehouseIOSTest.app */;
-			productType = "com.apple.product-type.application";
+			name = "MHWarehouseIOS Tests";
+			productName = "MHWarehouseIOS Tests";
+			productReference = 8BD096DE1AD809FC00667CA5 /* MHWarehouseIOS Tests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
 
@@ -217,6 +210,11 @@
 				CLASSPREFIX = MH;
 				LastUpgradeCheck = 0440;
 				ORGANIZATIONNAME = "Micah Hainline";
+				TargetAttributes = {
+					8BD096DD1AD809FC00667CA5 = {
+						TestTargetID = 5AB91CCE15DA8EDA00DFFA92;
+					};
+				};
 			};
 			buildConfigurationList = 5AB91CC915DA8EDA00DFFA92 /* Build configuration list for PBXProject "MHWarehouseIOS" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -231,7 +229,7 @@
 			projectRoot = "";
 			targets = (
 				5AB91CCE15DA8EDA00DFFA92 /* MHWarehouseIOS */,
-				5AC8ED981652F268007C86A8 /* MHWarehouseIOSTest */,
+				8BD096DD1AD809FC00667CA5 /* MHWarehouseIOS Tests */,
 			);
 		};
 /* End PBXProject section */
@@ -245,15 +243,11 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		5AC8ED971652F268007C86A8 /* Resources */ = {
+		8BD096DC1AD809FC00667CA5 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5ADFD08F165441D20037B619 /* MHWarehouseIOS-Info.plist in Resources */,
-				5ADFD097165441F40037B619 /* Default-568h@2x.png in Resources */,
-				5ADFD098165441F40037B619 /* Default.png in Resources */,
-				5ADFD099165441F40037B619 /* Default@2x.png in Resources */,
-				5ADFD09B165441F40037B619 /* MHWarehouseIOSTest-Info.plist in Resources */,
+				8BD096E81AD809FC00667CA5 /* InfoPlist.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -272,20 +266,34 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		5AC8ED951652F268007C86A8 /* Sources */ = {
+		8BD096DA1AD809FC00667CA5 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5ADFD08B165441D20037B619 /* MHAppDelegate.m in Sources */,
-				5ADFD08D165441D20037B619 /* MHWarehouse.m in Sources */,
-				5ADFD09A165441F40037B619 /* main.m in Sources */,
-				5ADFD09C165441F40037B619 /* MHWarehouseTest.m in Sources */,
-				5ADFD0B4165444400037B619 /* MHRoom.m in Sources */,
-				5ADFD0B8165445040037B619 /* MHBox.m in Sources */,
+				8BD096EA1AD809FC00667CA5 /* MHWarehouseIOS_Tests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		8BD096ED1AD809FC00667CA5 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 5AB91CCE15DA8EDA00DFFA92 /* MHWarehouseIOS */;
+			targetProxy = 8BD096EC1AD809FC00667CA5 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		8BD096E61AD809FC00667CA5 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8BD096E71AD809FC00667CA5 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		5AB91D0015DA8EDA00DFFA92 /* Debug */ = {
@@ -359,52 +367,75 @@
 			};
 			name = Release;
 		};
-		5AC8EDB01652F269007C86A8 /* Debug */ = {
+		8BD096EE1AD809FC00667CA5 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/MHWarehouseIOS.app/MHWarehouseIOS";
 				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
-					"\"$(SRCROOT)\"",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "MHWarehouseIOSTest/MHWarehouseIOSTest-Prefix.pch";
-				INFOPLIST_FILE = "MHWarehouseIOSTest/MHWarehouseIOSTest-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
-				ONLY_ACTIVE_ARCH = YES;
-				OTHER_LDFLAGS = (
-					"-ObjC",
-					"-all_load",
+				GCC_PREFIX_HEADER = "MHWarehouseIOS Tests/MHWarehouseIOS Tests-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
 				);
-				PRODUCT_NAME = MHWarehouseIOSTest;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				WRAPPER_EXTENSION = app;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				INFOPLIST_FILE = "MHWarehouseIOS Tests/MHWarehouseIOS Tests-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
 			};
 			name = Debug;
 		};
-		5AC8EDB11652F269007C86A8 /* Release */ = {
+		8BD096EF1AD809FC00667CA5 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/MHWarehouseIOS.app/MHWarehouseIOS";
 				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				ENABLE_NS_ASSERTIONS = NO;
 				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
-					"\"$(SRCROOT)\"",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "MHWarehouseIOSTest/MHWarehouseIOSTest-Prefix.pch";
-				INFOPLIST_FILE = "MHWarehouseIOSTest/MHWarehouseIOSTest-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
-				OTHER_LDFLAGS = (
-					"-ObjC",
-					"-all_load",
-				);
-				PRODUCT_NAME = MHWarehouseIOSTest;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				WRAPPER_EXTENSION = app;
+				GCC_PREFIX_HEADER = "MHWarehouseIOS Tests/MHWarehouseIOS Tests-Prefix.pch";
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				INFOPLIST_FILE = "MHWarehouseIOS Tests/MHWarehouseIOS Tests-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
 			};
 			name = Release;
 		};
@@ -429,11 +460,11 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		5AC8EDB21652F269007C86A8 /* Build configuration list for PBXNativeTarget "MHWarehouseIOSTest" */ = {
+		8BD096F01AD809FC00667CA5 /* Build configuration list for PBXNativeTarget "MHWarehouseIOS Tests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				5AC8EDB01652F269007C86A8 /* Debug */,
-				5AC8EDB11652F269007C86A8 /* Release */,
+				8BD096EE1AD809FC00667CA5 /* Debug */,
+				8BD096EF1AD809FC00667CA5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

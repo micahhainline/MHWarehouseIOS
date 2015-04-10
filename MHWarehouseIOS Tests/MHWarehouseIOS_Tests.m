@@ -1,26 +1,26 @@
-#import <GHUnitIOS/GHTestCase.h>
+#import <XCTest/XCTest.h>
 #import "MHWarehouse.h"
 #import "MHRoom.h"
 #import "MHBox.h"
 #import "MHHazmatFlags.h"
 
-#define GHAssertEqualContents(FIRST__, SECOND__) GHAssertEqualObjects([NSSet setWithArray:FIRST__], [NSSet setWithArray:SECOND__], nil)
+#define XCTAssertEqualContents(FIRST__, SECOND__) XCTAssertEqualObjects([NSSet setWithArray:FIRST__], [NSSet setWithArray:SECOND__])
 
-@interface MHWarehouseTest : GHTestCase
+@interface MHWarehouseIOS_Tests : XCTestCase
 
 @end
 
-@implementation MHWarehouseTest
+@implementation MHWarehouseIOS_Tests
 
 - (void)testWhenOneBoxIsAddedToOneRoomThenTheRoomContainsTheBox {
     MHRoom *loadingDock = [[MHRoom alloc] initWithVolumeInSquareMeters:100];
-
+    
     MHWarehouse *testObject = [[MHWarehouse alloc] initWithRooms:@[loadingDock]];
     
     MHBox *box1 = [[MHBox alloc] initWithName:@"box1" andVolumeInSquareMeters:10];
-
+    
     [testObject addBoxes:@[box1]];
-    GHAssertEqualContents(loadingDock.boxes, @[box1]);
+    XCTAssertEqualContents(loadingDock.boxes, @[box1]);
 }
 
 - (void)testWhenBoxesAreAddedThenTheyAreAddedToFirstRoomFirstUntilCapacityIsReached {
@@ -30,14 +30,14 @@
     MHBox *box2 = [[MHBox alloc] initWithName:@"box2" andVolumeInSquareMeters:70];
     MHBox *box3 = [[MHBox alloc] initWithName:@"box3" andVolumeInSquareMeters:15];
     MHBox *box4 = [[MHBox alloc] initWithName:@"box4" andVolumeInSquareMeters:10];
-
+    
     MHWarehouse *testObject = [[MHWarehouse alloc] initWithRooms:@[loadingDock, mainStorage]];
-
+    
     [testObject addBoxes:@[box1, box2, box3, box4]];
-
+    
     NSArray *expected = @[box1, box2, box3];
-    GHAssertEqualContents(loadingDock.boxes, expected);
-    GHAssertEqualContents(mainStorage.boxes, @[box4]);
+    XCTAssertEqualContents(loadingDock.boxes, expected);
+    XCTAssertEqualContents(mainStorage.boxes, @[box4]);
 }
 
 - (void)testWhenBoxOver50VolumeIsLoadedThenItIsNotLoadedInARoomRequiringStairs {
@@ -47,14 +47,14 @@
     MHBox *box2 = [[MHBox alloc] initWithName:@"box2" andVolumeInSquareMeters:50];
     MHBox *box3 = [[MHBox alloc] initWithName:@"box3" andVolumeInSquareMeters:51];
     MHBox *box4 = [[MHBox alloc] initWithName:@"box4" andVolumeInSquareMeters:10];
-
+    
     MHWarehouse *testObject = [[MHWarehouse alloc] initWithRooms:@[basement, mainStorage]];
-
+    
     [testObject addBoxes:@[box1, box2, box3, box4]];
-
+    
     NSArray *expected = @[box1, box2, box4];
-    GHAssertEqualContents(basement.boxes, expected);
-    GHAssertEqualContents(mainStorage.boxes, @[box3]);
+    XCTAssertEqualContents(basement.boxes, expected);
+    XCTAssertEqualContents(mainStorage.boxes, @[box3]);
 }
 
 - (void)testWhenBoxesExceedCapacityThenFinalBoxesAreRejected {
@@ -63,14 +63,14 @@
     MHBox *box2 = [[MHBox alloc] initWithName:@"box2" andVolumeInSquareMeters:40];
     MHBox *box3 = [[MHBox alloc] initWithName:@"box3" andVolumeInSquareMeters:40];
     MHBox *box4 = [[MHBox alloc] initWithName:@"box4" andVolumeInSquareMeters:10];
-
+    
     MHWarehouse *testObject = [[MHWarehouse alloc] initWithRooms:@[loadingDock]];
-
+    
     NSArray *rejectedBoxes = [testObject addBoxes:@[box1, box2, box3, box4]];
-
+    
     NSArray *expected = @[box1, box2, box4];
-    GHAssertEqualContents(loadingDock.boxes, expected);
-    GHAssertEqualContents(rejectedBoxes, @[box3]);
+    XCTAssertEqualContents(loadingDock.boxes, expected);
+    XCTAssertEqualContents(rejectedBoxes, @[box3]);
 }
 
 - (void)testWhenChemicalBoxIsLoadedItIsLoadedInSafeRoom {
@@ -79,15 +79,15 @@
     MHBox *box1 = [[MHBox alloc] initWithName:@"box1" andVolumeInSquareMeters:10 andHazmatFlags:MHHazmatFlagsNone];
     MHBox *box2 = [[MHBox alloc] initWithName:@"box2" andVolumeInSquareMeters:10 andHazmatFlags:MHHazmatFlagsChemical];
     MHBox *box3 = [[MHBox alloc] initWithName:@"box3" andVolumeInSquareMeters:10 andHazmatFlags:MHHazmatFlagsNone];
-
+    
     MHWarehouse *testObject = [[MHWarehouse alloc] initWithRooms:@[loadingDock, chemStorage]];
-
+    
     NSArray *rejectedBoxes = [testObject addBoxes:@[box1, box2, box3]];
-
+    
     NSArray *expected = @[box1, box3];
-    GHAssertEqualContents(loadingDock.boxes, expected);
-    GHAssertEqualContents(chemStorage.boxes, @[box2]);
-    GHAssertTrue(rejectedBoxes.count == 0, nil);
+    XCTAssertEqualContents(loadingDock.boxes, expected);
+    XCTAssertEqualContents(chemStorage.boxes, @[box2]);
+    XCTAssertTrue(rejectedBoxes.count == 0);
 }
 
 - (void)testWhenHazmatHasNoSafeRoomThenItIsRejected {
@@ -96,15 +96,15 @@
     MHBox *box1 = [[MHBox alloc] initWithName:@"box1" andVolumeInSquareMeters:10 andHazmatFlags:MHHazmatFlagsNone];
     MHBox *box2 = [[MHBox alloc] initWithName:@"box2" andVolumeInSquareMeters:10 andHazmatFlags:MHHazmatFlagsChemical];
     MHBox *box3 = [[MHBox alloc] initWithName:@"box3" andVolumeInSquareMeters:10 andHazmatFlags:MHHazmatFlagsNone];
-
+    
     MHWarehouse *testObject = [[MHWarehouse alloc] initWithRooms:@[loadingDock, mainStorage]];
-
+    
     NSArray *rejectedBoxes = [testObject addBoxes:@[box1, box2, box3]];
-
+    
     NSArray *expected = @[box1, box3];
-    GHAssertEqualContents(loadingDock.boxes, expected);
-    GHAssertEqualContents(mainStorage.boxes, @[]);
-    GHAssertEqualContents(rejectedBoxes, @[box2]);
+    XCTAssertEqualContents(loadingDock.boxes, expected);
+    XCTAssertEqualContents(mainStorage.boxes, @[]);
+    XCTAssertEqualContents(rejectedBoxes, @[box2]);
 }
 
 - (void)testDifferentHazmatBoxesCanBeStoredInDifferentRoomsWhileStillRespectingSizeAndStairs {
@@ -117,17 +117,17 @@
     MHBox *box4 = [[MHBox alloc] initWithName:@"box4" andVolumeInSquareMeters:10 andHazmatFlags:MHHazmatFlagsNuclear | MHHazmatFlagsChemical];
     MHBox *box5 = [[MHBox alloc] initWithName:@"box5" andVolumeInSquareMeters:50 andHazmatFlags:MHHazmatFlagsChemical];
     MHBox *box6 = [[MHBox alloc] initWithName:@"box6" andVolumeInSquareMeters:50 andHazmatFlags:MHHazmatFlagsChemical];
-
+    
     MHWarehouse *testObject = [[MHWarehouse alloc] initWithRooms:@[loadingDock, chemLoft, vault]];
-
+    
     NSArray *rejectedBoxes = [testObject addBoxes:@[box1, box2, box3, box4, box5, box6]];
-
-    GHAssertEqualContents(loadingDock.boxes, @[]);
+    
+    XCTAssertEqualContents(loadingDock.boxes, @[]);
     NSArray *expected = @[box1, box5];
-    GHAssertEqualContents(chemLoft.boxes, expected);
+    XCTAssertEqualContents(chemLoft.boxes, expected);
     expected = @[box2, box3, box4, box6];
-    GHAssertEqualContents(vault.boxes, expected);
-    GHAssertTrue(rejectedBoxes.count == 0, nil);
+    XCTAssertEqualContents(vault.boxes, expected);
+    XCTAssertTrue(rejectedBoxes.count == 0);
 }
 
 - (void)testBoxesAreNotPlacedSuchThatAHazmatWillHaveNoPlaceToGoWhenThereIsEnoughRoom {
@@ -138,16 +138,16 @@
     MHBox *box3 = [[MHBox alloc] initWithName:@"box3" andVolumeInSquareMeters:60 andHazmatFlags:MHHazmatFlagsNone];
     MHBox *box4 = [[MHBox alloc] initWithName:@"box4" andVolumeInSquareMeters:60 andHazmatFlags:MHHazmatFlagsNone];
     MHBox *box5 = [[MHBox alloc] initWithName:@"box5" andVolumeInSquareMeters:60 andHazmatFlags:MHHazmatFlagsChemical];
-
+    
     MHWarehouse *testObject = [[MHWarehouse alloc] initWithRooms:@[vault, mainStorage]];
-
+    
     NSArray *rejectedBoxes = [testObject addBoxes:@[box1, box2, box3, box4, box5]];
-
+    
     NSArray *expected = @[box1, box5];
-    GHAssertEqualContents(vault.boxes, expected);
+    XCTAssertEqualContents(vault.boxes, expected);
     expected = @[box2, box3, box4];
-    GHAssertEqualContents(mainStorage.boxes, expected);
-    GHAssertTrue(rejectedBoxes.count == 0, nil);
+    XCTAssertEqualContents(mainStorage.boxes, expected);
+    XCTAssertTrue(rejectedBoxes.count == 0);
 }
 
 - (void)testOrderForBoxesIsPreservedWhenThereIsEnoughRoom {
@@ -158,16 +158,16 @@
     MHBox *box3 = [[MHBox alloc] initWithName:@"box3" andVolumeInSquareMeters:60 andHazmatFlags:MHHazmatFlagsNone];
     MHBox *box4 = [[MHBox alloc] initWithName:@"box4" andVolumeInSquareMeters:30 andHazmatFlags:MHHazmatFlagsNone];
     MHBox *box5 = [[MHBox alloc] initWithName:@"box5" andVolumeInSquareMeters:60 andHazmatFlags:MHHazmatFlagsChemical];
-
+    
     MHWarehouse *testObject = [[MHWarehouse alloc] initWithRooms:@[vault, mainStorage]];
-
+    
     NSArray *rejectedBoxes = [testObject addBoxes:@[box1, box2, box3, box4, box5]];
-
+    
     NSArray *expected = @[box1, box4, box5];
-    GHAssertEqualContents(vault.boxes, expected);
+    XCTAssertEqualContents(vault.boxes, expected);
     expected = @[box2, box3];
-    GHAssertEqualContents(mainStorage.boxes, expected);
-    GHAssertTrue(rejectedBoxes.count == 0, nil);
+    XCTAssertEqualContents(mainStorage.boxes, expected);
+    XCTAssertTrue(rejectedBoxes.count == 0);
 }
 
 @end
