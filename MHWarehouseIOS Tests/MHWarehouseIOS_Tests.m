@@ -40,7 +40,7 @@
     XCTAssertEqualContents(mainStorage.boxes, @[box4]);
 }
 
-- (void)testWhenBoxOver50VolumeIsLoadedThenItIsNotLoadedInARoomRequiringStairs {
+- (void)testWhenBoxOver50VolumeIsLoadedThenItIsNotLoadedInARoomThatHasStairs {
     MHRoom *basement = [[MHRoom alloc] initWithVolumeInSquareMeters:1000 andStairs:YES];
     MHRoom *mainStorage = [[MHRoom alloc] initWithVolumeInSquareMeters:1000 andStairs:NO];
     MHBox *box1 = [[MHBox alloc] initWithName:@"box1" andVolumeInSquareMeters:10];

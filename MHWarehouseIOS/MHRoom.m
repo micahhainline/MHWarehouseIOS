@@ -4,7 +4,7 @@
 
 @property (nonatomic, readwrite) int volumeInSquareMeters;
 @property (nonatomic, readwrite) MHHazmatFlags hazmatFlags;
-@property (nonatomic, readwrite) BOOL requiresStairs;
+@property (nonatomic, readwrite) BOOL hasStairs;
 
 @end
 
@@ -23,7 +23,7 @@
         self.boxes = [NSMutableArray array];
         self.volumeInSquareMeters = volume;
         self.hazmatFlags = hazmatFlags;
-        self.requiresStairs = stairs;
+        self.hasStairs = stairs;
     }
     return self;
 }
