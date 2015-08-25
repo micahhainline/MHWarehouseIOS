@@ -57,7 +57,7 @@
     XCTAssertEqualContents(mainStorage.boxes, @[box3]);
 }
 
-- (void)testWhenBoxesExceedCapacityThenFinalBoxesAreRejected {
+- (void)testWhenBoxesExceedCapacityOfSingleRoomThenFinalBoxesAreRejected {
     MHRoom *loadingDock = [[MHRoom alloc] initWithVolumeInSquareMeters:100];
     MHBox *box1 = [[MHBox alloc] initWithName:@"box1" andVolumeInSquareMeters:40];
     MHBox *box2 = [[MHBox alloc] initWithName:@"box2" andVolumeInSquareMeters:40];
@@ -70,6 +70,25 @@
     
     NSArray *expected = @[box1, box2, box4];
     XCTAssertEqualContents(loadingDock.boxes, expected);
+    XCTAssertEqualContents(rejectedBoxes, @[box3]);
+}
+
+- (void)testWhenBoxesExceedCapacityOfMultipleRoomsThenFinalBoxesAreRejected {
+    MHRoom *loadingDock = [[MHRoom alloc] initWithVolumeInSquareMeters:100];
+    MHRoom *mainStorage = [[MHRoom alloc] initWithVolumeInSquareMeters:40];
+    MHBox *box1 = [[MHBox alloc] initWithName:@"box1" andVolumeInSquareMeters:40];
+    MHBox *box2 = [[MHBox alloc] initWithName:@"box2" andVolumeInSquareMeters:40];
+    MHBox *box3 = [[MHBox alloc] initWithName:@"box3" andVolumeInSquareMeters:50];
+    MHBox *box4 = [[MHBox alloc] initWithName:@"box4" andVolumeInSquareMeters:10];
+    MHBox *box5 = [[MHBox alloc] initWithName:@"box5" andVolumeInSquareMeters:20];
+    
+    MHWarehouse *testObject = [[MHWarehouse alloc] initWithRooms:@[loadingDock, mainStorage]];
+    
+    NSArray *rejectedBoxes = [testObject addBoxes:@[box1, box2, box3, box4, box5]];
+    
+    NSArray *expected = @[box1, box2, box4];
+    XCTAssertEqualContents(loadingDock.boxes, expected);
+    XCTAssertEqualContents(mainStorage.boxes, @[box5]);
     XCTAssertEqualContents(rejectedBoxes, @[box3]);
 }
 
